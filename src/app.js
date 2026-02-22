@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
+const ticketRoutes = require('./routes/ticket.routes');
 
+app.use('/api/tickets', ticketRoutes);
 app.use(express.json());
 
 app.get('/', (req, res) => {

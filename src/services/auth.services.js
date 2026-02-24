@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
-const { User } = require("../models");
+const db = require("../models");
+const User = db.User;
 const { hashPassword, comparePassword } = require("../utils/password");
 const { secret, expiresIn } = require("../config/jwt");
 
